@@ -1,0 +1,17 @@
+{
+  "regex_only": {
+    "expected_ms": 100,
+    "actual_ms": 2323.34,
+    "status": "SLOW"
+  },
+  "llm_analysis": {
+    "expected_ms": "1500-2000",
+    "actual_ms": 1807.98,
+    "status": "PASS"
+  },
+  "normal_request": {
+    "expected_ms": 100,
+    "actual_ms": 1551.82,
+    "status": "SLOW"
+  }
+}

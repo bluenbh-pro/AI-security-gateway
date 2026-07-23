@@ -1,0 +1,274 @@
+version: "1.0"
+date: "2026-06-04"
+description: "금융감독 규제 + 사내 정책 규칙"
+
+regulations:
+  fsma_network_separation_relief:
+    title: "금융위 망분리 규제 완화"
+    announcement_date: "2026-05-22"
+    effective_date: "2026-06-01"
+    description: "보안목적 AI 활용에 대한 망분리 규제 완화"
+
+    requirements:
+      - "실시간 감시 시스템 구축 필수"
+      - "자동 대응 메커니즘 필수"
+      - "모든 접근 기록 최소 1년 보관"
+      - "마스킹 또는 암호화 적용"
+      - "보안 인시던트 90일 내 공시"
+
+    approved_ai_systems:
+      - "ChatGPT"
+      - "Claude"
+      - "Gemini"
+
+    monitoring_requirements:
+      - "실시간 입력 감시"
+      - "기술적 공격 탐지"
+      - "비정상 행동 탐지"
+      - "접근 기록 로깅"
+
+  personal_info_protection_law:
+    title: "개인정보보호법"
+    effective_date: "2020-01-01"
+    description: "개인식별정보(PII) 보호"
+
+    requirements:
+      - "PII는 반드시 암호화 또는 마스킹"
+      - "무단 전송 금지"
+      - "접근 기록 최소 3년 보관"
+      - "개인정보 유출 시 14일 내 공시"
+
+    covered_data:
+      - "주민번호"
+      - "여권번호"
+      - "계좌번호"
+      - "신용카드번호"
+      - "고객명"
+      - "연락처"
+
+  credit_information_law:
+    title: "신용정보법"
+    effective_date: "2020-08-05"
+    description: "신용정보(신용등급, 대출한도 등) 보호"
+
+    requirements:
+      - "신용정보 무단 열람 금지"
+      - "신용정보 열람 기록 보관"
+      - "비정상 접근 감시"
+
+    covered_data:
+      - "신용등급"
+      - "신용점수"
+      - "대출한도"
+      - "연체기록"
+
+access_control_policies:
+  departments:
+    인사팀:
+      access_level: "high"
+      allowed: ["임직원정보", "급여", "평가", "근태", "교육", "규정"]
+      forbidden: ["고객정보", "금융거래정보"]
+      access_hours: "09:00-18:00"
+
+    법무팀:
+      access_level: "high"
+      allowed: ["계약정보", "규제정보", "규정", "인사정보"]
+      forbidden: ["고객개인정보_상세"]
+      access_hours: "09:00-18:00"
+
+    영업팀:
+      access_level: "medium"
+      allowed: ["고객정보", "거래액", "고객명", "연락처"]
+      forbidden: ["신용등급", "대출한도", "임직원급여", "경영전략"]
+      access_hours: "09:00-18:00"
+
+    재경팀:
+      access_level: "high"
+      allowed: ["계좌정보", "거래정보", "회계정보", "예산정보"]
+      forbidden: ["고객개인정보", "임직원급여_상세"]
+      access_hours: "09:00-18:00"
+
+    감사팀:
+      access_level: "critical"
+      allowed: ["모든_데이터"]
+      forbidden: []
+      access_hours: "09:00-18:00"
+      purpose: "감사 및 감시"
+
+    기획팀:
+      access_level: "medium"
+      allowed: ["전략정보", "시장정보", "판매데이터", "예산정보"]
+      forbidden: ["고객개인정보", "임직원급여"]
+      access_hours: "09:00-18:00"
+
+    홍보팀:
+      access_level: "low"
+      allowed: ["공개정보", "제품정보", "미디어정보"]
+      forbidden: ["고객정보", "내부정보", "기밀정보"]
+      access_hours: "09:00-18:00"
+
+    마케팅팀:
+      access_level: "medium"
+      allowed: ["시장정보", "고객정보", "판매데이터", "제품정보"]
+      forbidden: ["신용등급", "임직원급여"]
+      access_hours: "09:00-18:00"
+
+    계리팀:
+      access_level: "high"
+      allowed: ["계리정보", "고객정보", "거래정보", "예산정보"]
+      forbidden: ["임직원급여"]
+      access_hours: "09:00-18:00"
+
+    상품팀:
+      access_level: "medium"
+      allowed: ["제품정보", "개발정보", "시장정보", "고객정보"]
+      forbidden: ["고객개인정보_상세"]
+      access_hours: "09:00-18:00"
+
+    컴플라이언스팀:
+      access_level: "critical"
+      allowed: ["규제정보", "규정정보", "감시로그", "회계정보"]
+      forbidden: []
+      access_hours: "09:00-18:00"
+      purpose: "규제 준수 감시"
+
+    IT개발팀:
+      access_level: "high"
+      allowed: ["시스템로그", "아키텍처정보", "코드", "개발정보", "암호화키"]
+      forbidden: ["고객정보", "금융거래정보"]
+      access_hours: "flexible"
+
+    IT운영팀:
+      access_level: "high"
+      allowed: ["서버정보", "시스템로그", "아키텍처정보", "암호화키"]
+      forbidden: ["고객정보", "금융거래정보"]
+      access_hours: "24/7"
+
+    IT보안팀:
+      access_level: "critical"
+      allowed: ["모든_데이터"]
+      forbidden: []
+      access_hours: "24/7"
+      purpose: "보안 감시 및 위협 대응"
+      notes: "IT보안팀은 모든 데이터 접근 가능하지만 접근 기록 자동 생성"
+
+risk_assessment_policies:
+  tier_1:
+    name: "허용"
+    score_range: "0-20"
+    decision: "즉시 처리"
+    approval_required: false
+    auto_approve: true
+    response_time: "<1초"
+    action: "process"
+
+  tier_2:
+    name: "조건부허용"
+    score_range: "21-40"
+    decision: "자동 마스킹 후 처리"
+    approval_required: false
+    auto_approve: true
+    response_time: "<2초"
+    action: "mask_and_process"
+
+  tier_3:
+    name: "마스킹+허용"
+    score_range: "41-60"
+    decision: "민감정보 제거 후 처리"
+    approval_required: false
+    auto_approve: true
+    response_time: "<2초"
+    action: "mask_and_allow"
+
+  tier_4:
+    name: "승인요청"
+    score_range: "61-80"
+    decision: "관리자 승인 대기"
+    approval_required: true
+    approver: "department_manager"
+    timeout: "1시간"
+    escalation: "30분 미응답 시 보안팀에 상향"
+    response_time: "<5초"
+    action: "request_approval"
+
+  tier_5:
+    name: "차단"
+    score_range: "81-100"
+    decision: "즉시 차단 + 경고 알림"
+    approval_required: false
+    auto_block: true
+    response_time: "<0.5초"
+    action: "block"
+    notification:
+      - "보안팀"
+      - "CISO"
+      - "사용자"
+
+incident_response_procedures:
+  low_risk:
+    condition: "risk_score < 30"
+    action: "로그 기록만 수행"
+    notification: "없음"
+    escalation: "없음"
+
+  medium_risk:
+    condition: "30 <= risk_score < 60"
+    action: "마스킹 또는 알림"
+    notification: "부서 관리자"
+    escalation: "1시간 내 검토"
+
+  high_risk:
+    condition: "60 <= risk_score < 80"
+    action: "승인 요청"
+    notification: "부서 관리자 + 보안팀"
+    escalation: "30분 내 응답"
+
+  critical_risk:
+    condition: "risk_score >= 80"
+    action: "즉시 차단"
+    notification: "보안팀 + CISO"
+    escalation: "즉시 조치"
+    forensics: "해당 세션 기록 보관"
+
+compliance_requirements:
+  audit_trail:
+    retention_period: "1년"
+    log_content:
+      - "사용자 ID"
+      - "접근 시간"
+      - "접근 데이터"
+      - "의사결정"
+      - "조치 내용"
+    review_frequency: "월 1회 최소"
+
+  incident_reporting:
+    detection_to_response: "1시간"
+    response_to_reporting: "24시간"
+    escalation_to_ciso: "2시간"
+    public_disclosure: "30일 (중대 사건은 즉시)"
+
+  staff_training:
+    frequency: "연 2회"
+    topics:
+      - "개인정보보호법"
+      - "신용정보법"
+      - "보안 위협"
+      - "올바른 데이터 취급"
+
+  system_testing:
+    penetration_test: "분기 1회"
+    vulnerability_scan: "월 1회"
+    disaster_recovery: "분기 1회"
+
+data_retention_policies:
+  access_logs:
+    retention: "1년"
+    deletion: "자동 삭제"
+
+  security_incidents:
+    retention: "3년"
+    deletion: "사건 해결 후 3년"
+
+  customer_data:
+    retention: "계약 기간 + 3년"
+    deletion: "수동 요청 또는 자동 삭제"

@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "case": 1,
+      "final_score": 52.94,
+      "agent1_risk_score": 60,
+      "agent1_sensitivity": "대외비",
+      "agent2_context_risk": 70.0,
+      "data_types": [
+        "transaction_data"
+      ],
+      "agent3_laws": [],
+      "prompt": "고객 만족도 설문 결과 분석해줄 수 있나?"
+    },
+    {
+      "case": 2,
+      "final_score": 56.47,
+      "agent1_risk_score": 60,
+      "agent1_sensitivity": "대외비",
+      "agent2_context_risk": 80.0,
+      "data_types": [
+        "transaction_data"
+      ],
+      "agent3_laws": [],
+      "prompt": "고객 만족도 설문 결과 분석해줄 수 있나?"
+    },
+    {
+      "case": 3,
+      "final_score": 63.53,
+      "agent1_risk_score": 60,
+      "agent1_sensitivity": "대외비",
+      "agent2_context_risk": 100,
+      "data_types": [
+        "transaction_data"
+      ],
+      "agent3_laws": [],
+      "prompt": "지난 분기 우리 회사 매출액 분석해줄 수 있나?"
+    },
+    {
+      "case": 4,
+      "final_score": 69.41,
+      "agent1_risk_score": 80,
+      "agent1_sensitivity": "대외비",
+      "agent2_context_risk": 90.0,
+      "data_types": [
+        "personal_data",
+        "financial_data"
+      ],
+      "agent3_laws": [],
+      "prompt": "모든 직원의 급여 및 보너스 현황 분석해줄 수 있나?"
+    },
+    {
+      "case": 5,
+      "final_score": 72.94,
+      "agent1_risk_score": 80,
+      "agent1_sensitivity": "대외비",
+      "agent2_context_risk": 100,
+      "data_types": [
+        "personal_data",
+        "financial_data"
+      ],
+      "agent3_laws": [],
+      "prompt": "모든 직원의 급여 및 보너스 현황 분석해줄 수 있나?"
+    }
+  ]
+}

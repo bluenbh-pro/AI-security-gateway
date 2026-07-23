@@ -1,0 +1,14 @@
+{
+  "best_weights": {
+    "data_sensitivity": 0.9,
+    "context_risk": 0.1,
+    "policy_risk": -0.0
+  },
+  "best_mae": 4.06,
+  "iterations": 231,
+  "improvement": {
+    "original_mae": 20.4,
+    "optimized_mae": 4.06,
+    "reduction": 16.34
+  }
+}

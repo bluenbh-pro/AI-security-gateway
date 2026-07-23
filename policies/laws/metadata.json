@@ -1,0 +1,84 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "개인정보보호법",
+      "shortName": "개인정보법",
+      "description": "개인정보 수집, 이용, 보유, 삭제 규정",
+      "files": {
+        "본법": "1_개인정보보호법/본법.pdf",
+        "시행령": "1_개인정보보호법/시행령.pdf"
+      },
+      "priority": "critical",
+      "relevantTo": ["극비", "개인정보", "마스킹"]
+    },
+    {
+      "id": 2,
+      "name": "신용정보의 이용 및 보호에 관한 법률",
+      "shortName": "신용정보법",
+      "description": "신용정보 취급 및 접근 제어 규정",
+      "files": {
+        "본법": "2_신용정보법/본법.pdf",
+        "시행령": "2_신용정보법/시행령.pdf",
+        "시행규칙": "2_신용정보법/시행규칙.pdf"
+      },
+      "priority": "critical",
+      "relevantTo": ["신용정보", "승인요청"]
+    },
+    {
+      "id": 3,
+      "name": "전자금융거래법",
+      "shortName": "전자금융법",
+      "description": "금융거래 보안 및 고객 정보 보호",
+      "files": {
+        "본법": "3_전자금융거래법/본법.pdf",
+        "시행령": "3_전자금융거래법/시행령.pdf"
+      },
+      "priority": "high",
+      "relevantTo": ["금융거래", "인증", "암호화"]
+    },
+    {
+      "id": 4,
+      "name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "shortName": "정보통신망법",
+      "description": "온라인 개인정보 보호 및 보안 의무",
+      "files": {
+        "본법": "4_정보통신망법/본법.pdf",
+        "시행령": "4_정보통신망법/시행령.pdf",
+        "시행규칙": "4_정보통신망법/시행규칙.pdf"
+      },
+      "priority": "high",
+      "relevantTo": ["암호화", "감사로그", "악성코드"]
+    },
+    {
+      "id": 5,
+      "name": "데이터 산업진흥 및 이용촉진에 관한 기본법",
+      "shortName": "데이터기본법",
+      "description": "데이터 활용 및 개인정보 처리 기준",
+      "files": {
+        "본법": "5_데이터기본법/본법.pdf",
+        "시행령": "5_데이터기본법/시행령.pdf",
+        "시행규칙": "5_데이터기본법/시행규칙.pdf"
+      },
+      "priority": "medium",
+      "relevantTo": ["데이터활용", "AI학습"]
+    },
+    {
+      "id": 6,
+      "name": "인공지능 발전과 신뢰 기반 조성 등에 관한 기본법",
+      "shortName": "AI기본법",
+      "description": "AI 모델 학습 및 신뢰성 규제",
+      "files": {
+        "본법": "6_AI기본법/본법.pdf"
+      },
+      "priority": "medium",
+      "relevantTo": ["AI학습데이터", "투명성"]
+    }
+  ],
+  "summary": {
+    "total_categories": 6,
+    "total_files": 14,
+    "version": "1.0",
+    "created": "2026-07-08"
+  }
+}

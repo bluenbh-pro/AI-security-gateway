@@ -1,0 +1,158 @@
+{
+  "test_date": "2026-07-20",
+  "implementation": "current",
+  "samples_total": 10,
+  "accuracy": 50.0,
+  "results": [
+    {
+      "sample_id": 1,
+      "category": "명확한 위반 - FSMA",
+      "expected": {
+        "violation": true,
+        "type": "FSMA"
+      },
+      "actual": {
+        "violation": false,
+        "type": null,
+        "risk_score": 0
+      },
+      "accuracy": "✗ 부정확",
+      "time_ms": 2152.570962905884
+    },
+    {
+      "sample_id": 2,
+      "category": "명확한 위반 - Privacy Law",
+      "expected": {
+        "violation": true,
+        "type": "Privacy_Law"
+      },
+      "actual": {
+        "violation": true,
+        "type": "FSMA",
+        "risk_score": 20
+      },
+      "accuracy": "△ 부분정확 (타입 불일치)",
+      "time_ms": 0.17118453979492188
+    },
+    {
+      "sample_id": 3,
+      "category": "명확한 위반 - AI Act",
+      "expected": {
+        "violation": true,
+        "type": "AI_Act"
+      },
+      "actual": {
+        "violation": true,
+        "type": "AI_Act",
+        "risk_score": 10
+      },
+      "accuracy": "✓ 정확",
+      "time_ms": 0.09226799011230469
+    },
+    {
+      "sample_id": 4,
+      "category": "모호한 요청 - 경계선",
+      "expected": {
+        "violation": null,
+        "type": null
+      },
+      "actual": {
+        "violation": true,
+        "type": "FSMA",
+        "risk_score": 10
+      },
+      "accuracy": "✗ 부정확",
+      "time_ms": 0.034332275390625
+    },
+    {
+      "sample_id": 5,
+      "category": "모호한 요청 - 의도 불명",
+      "expected": {
+        "violation": null,
+        "type": null
+      },
+      "actual": {
+        "violation": false,
+        "type": null,
+        "risk_score": 0
+      },
+      "accuracy": "✓ 정확",
+      "time_ms": 0.025033950805664062
+    },
+    {
+      "sample_id": 6,
+      "category": "모호한 요청 - LLM 의존",
+      "expected": {
+        "violation": null,
+        "type": null
+      },
+      "actual": {
+        "violation": true,
+        "type": "AI_Act",
+        "risk_score": 10
+      },
+      "accuracy": "✗ 부정확",
+      "time_ms": 0.04696846008300781
+    },
+    {
+      "sample_id": 7,
+      "category": "정상 요청 - 공개",
+      "expected": {
+        "violation": false,
+        "type": null
+      },
+      "actual": {
+        "violation": false,
+        "type": null,
+        "risk_score": 0
+      },
+      "accuracy": "✓ 정확",
+      "time_ms": 0.02765655517578125
+    },
+    {
+      "sample_id": 8,
+      "category": "정상 요청 - 내부",
+      "expected": {
+        "violation": false,
+        "type": null
+      },
+      "actual": {
+        "violation": false,
+        "type": null,
+        "risk_score": 0
+      },
+      "accuracy": "✓ 정확",
+      "time_ms": 0.05888938903808594
+    },
+    {
+      "sample_id": 9,
+      "category": "정상 요청 - 기밀",
+      "expected": {
+        "violation": false,
+        "type": null
+      },
+      "actual": {
+        "violation": false,
+        "type": null,
+        "risk_score": 0
+      },
+      "accuracy": "✓ 정확",
+      "time_ms": 1544.5671081542969
+    },
+    {
+      "sample_id": 10,
+      "category": "엣지 케이스 - EOS 버전 (미지원)",
+      "expected": {
+        "violation": true,
+        "type": "EOS"
+      },
+      "actual": {
+        "violation": false,
+        "type": null,
+        "risk_score": 0
+      },
+      "accuracy": "✗ 부정확",
+      "time_ms": 1742.1793937683105
+    }
+  ]
+}

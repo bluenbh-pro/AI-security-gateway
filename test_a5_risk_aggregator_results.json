@@ -1,0 +1,104 @@
+{
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "success_rate": 100.0,
+  "results": [
+    {
+      "name": "1. Regex Only (High Confidence)",
+      "passed": true,
+      "result": {
+        "attack_detected": true,
+        "attack_type": "sql_injection",
+        "attack_score": 100.0,
+        "aggregation_method": "regex_only",
+        "final_confidence": 0.95,
+        "is_multi_attack": false
+      }
+    },
+    {
+      "name": "2. LLM Only (Regex Low Confidence)",
+      "passed": true,
+      "result": {
+        "attack_detected": true,
+        "attack_type": "Agent Abuse",
+        "attack_score": 100.0,
+        "aggregation_method": "llm_only",
+        "final_confidence": 0.95,
+        "is_multi_attack": true
+      }
+    },
+    {
+      "name": "3. Combined (Both Detected, Agreement)",
+      "passed": true,
+      "result": {
+        "attack_detected": true,
+        "attack_type": "sql_injection",
+        "attack_score": 100.0,
+        "aggregation_method": "regex_only",
+        "final_confidence": 0.99,
+        "is_multi_attack": false
+      }
+    },
+    {
+      "name": "4. Financial Data Weight Boost",
+      "passed": true,
+      "result": {
+        "attack_detected": true,
+        "attack_type": "financial_crime",
+        "attack_score": 100.0,
+        "aggregation_method": "regex_only",
+        "final_confidence": 0.85,
+        "is_multi_attack": false
+      }
+    },
+    {
+      "name": "5. Multiple Attacks Detected",
+      "passed": true,
+      "result": {
+        "attack_detected": true,
+        "attack_type": "unauthorized_data_access",
+        "attack_score": 100.0,
+        "aggregation_method": "regex_only",
+        "final_confidence": 0.85,
+        "is_multi_attack": false
+      }
+    },
+    {
+      "name": "6. No Attack Detected (Normal)",
+      "passed": true,
+      "result": {
+        "attack_detected": false,
+        "attack_type": "",
+        "attack_score": 0.0,
+        "aggregation_method": "none",
+        "final_confidence": 0.0,
+        "is_multi_attack": false
+      }
+    },
+    {
+      "name": "7. Disagreement (High Score Difference)",
+      "passed": true,
+      "result": {
+        "attack_detected": true,
+        "attack_type": "Prompt Injection",
+        "attack_score": 100.0,
+        "aggregation_method": "llm_only",
+        "final_confidence": 0.95,
+        "is_multi_attack": true
+      }
+    },
+    {
+      "name": "8. Financial Crime (Critical)",
+      "passed": true,
+      "result": {
+        "attack_detected": true,
+        "attack_type": "Prompt Injection",
+        "attack_score": 100.0,
+        "aggregation_method": "llm_only",
+        "final_confidence": 0.95,
+        "is_multi_attack": true
+      }
+    }
+  ]
+}

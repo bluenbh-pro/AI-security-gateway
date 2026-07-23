@@ -1,0 +1,47 @@
+{
+  "name": "전자금융감독규정 (FSMA)",
+  "version": "2026-06",
+  "description": "금융감독청의 전자금융감독규정 요구사항",
+  "violations": [
+    {
+      "id": "FSMA_001",
+      "title": "미공개 금융거래정보 공개 금지",
+      "description": "내부자정보, 미공개 거래정보의 공개 행위",
+      "keywords": ["미공개정보", "내부정보", "기밀", "극비"],
+      "severity": 100,
+      "applicable_data_types": ["극비", "기밀"]
+    },
+    {
+      "id": "FSMA_002",
+      "title": "대량 고객정보 조회 금지",
+      "description": "고객의 거래기록, 계좌정보 대량 조회/다운로드 행위",
+      "keywords": ["모든", "대량", "다운로드", "CSV", "내보내"],
+      "severity": 95,
+      "applicable_data_types": ["극비", "기밀"]
+    },
+    {
+      "id": "FSMA_003",
+      "title": "개인정보 과다 노출 금지",
+      "description": "개인식별정보 노출로 인한 개인정보 보호법 위반",
+      "keywords": ["개인정보", "주민번호", "여권", "연락처"],
+      "severity": 90,
+      "applicable_data_types": ["극비"]
+    },
+    {
+      "id": "FSMA_004",
+      "title": "거래 기록 보호",
+      "description": "고객의 거래 기록 무단 조회 및 공개 금지",
+      "keywords": ["거래기록", "계좌내역", "거래내역"],
+      "severity": 85,
+      "applicable_data_types": ["기밀"]
+    },
+    {
+      "id": "FSMA_005",
+      "title": "신용정보 보호",
+      "description": "신용등급, 신용도 등 신용정보 무단 공개 금지",
+      "keywords": ["신용등급", "신용도", "신용점수"],
+      "severity": 80,
+      "applicable_data_types": ["기밀"]
+    }
+  ]
+}

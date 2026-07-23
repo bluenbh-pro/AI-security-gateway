@@ -1,0 +1,35 @@
+{
+  "name": "AI기본법 (AI Safety Act)",
+  "version": "2026-06",
+  "description": "인공지능 안전성 및 윤리 요구사항",
+  "violations": [
+    {
+      "id": "AI_001",
+      "title": "AI 안전성 확보",
+      "description": "위험하거나 유해한 콘텐츠 생성 금지",
+      "keywords": ["위험", "유해", "폭력", "차별", "사기"],
+      "severity": 85
+    },
+    {
+      "id": "AI_002",
+      "title": "AI 투명성 요구",
+      "description": "AI 사용 명시 및 자동판정 결과 설명",
+      "keywords": ["자동판정", "AI 사용", "블랙박스"],
+      "severity": 75
+    },
+    {
+      "id": "AI_003",
+      "title": "편향성 제거",
+      "description": "AI 학습 과정에서 편향성 제거",
+      "keywords": ["차별", "편향", "불공정"],
+      "severity": 80
+    },
+    {
+      "id": "AI_004",
+      "title": "설명가능성 확보",
+      "description": "사용자가 AI 판정 근거를 이해할 수 있어야 함",
+      "keywords": ["설명", "근거", "해석"],
+      "severity": 70
+    }
+  ]
+}

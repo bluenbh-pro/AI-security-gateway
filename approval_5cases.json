@@ -1,0 +1,56 @@
+{
+  "samples": [
+    {
+      "case": 1,
+      "score": 52.94,
+      "context_risk": 70.0,
+      "data_types": [
+        "transaction_data"
+      ],
+      "laws": [],
+      "prompt": "고객 만족도 설문 결과 분석해줄 수 있나?"
+    },
+    {
+      "case": 2,
+      "score": 56.47,
+      "context_risk": 80.0,
+      "data_types": [
+        "transaction_data"
+      ],
+      "laws": [],
+      "prompt": "고객 만족도 설문 결과 분석해줄 수 있나?"
+    },
+    {
+      "case": 3,
+      "score": 63.53,
+      "context_risk": 100,
+      "data_types": [
+        "transaction_data"
+      ],
+      "laws": [],
+      "prompt": "지난 분기 우리 회사 매출액 분석해줄 수 있나?"
+    },
+    {
+      "case": 4,
+      "score": 69.41,
+      "context_risk": 90.0,
+      "data_types": [
+        "personal_data",
+        "financial_data"
+      ],
+      "laws": [],
+      "prompt": "모든 직원의 급여 및 보너스 현황 분석해줄 수 있나?"
+    },
+    {
+      "case": 5,
+      "score": 72.94,
+      "context_risk": 100,
+      "data_types": [
+        "personal_data",
+        "financial_data"
+      ],
+      "laws": [],
+      "prompt": "모든 직원의 급여 및 보너스 현황 분석해줄 수 있나?"
+    }
+  ]
+}

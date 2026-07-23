@@ -1,0 +1,35 @@
+{
+  "name": "개인정보보호법",
+  "version": "2026-06",
+  "description": "대한민국 개인정보보호법 요구사항",
+  "violations": [
+    {
+      "id": "PRIVACY_001",
+      "title": "개인정보 수집 목적 제한",
+      "description": "명시된 목적 외의 개인정보 수집 및 활용 금지",
+      "keywords": ["개인정보", "수집", "활용"],
+      "severity": 95
+    },
+    {
+      "id": "PRIVACY_002",
+      "title": "개인정보 3자 제공 제한",
+      "description": "개인 동의 없는 제3자 제공 금지",
+      "keywords": ["제3자", "외부공유", "제공"],
+      "severity": 90
+    },
+    {
+      "id": "PRIVACY_003",
+      "title": "개인정보 보유기간 제한",
+      "description": "목적 달성 후 지체 없이 삭제",
+      "keywords": ["장기보관", "삭제", "폐기"],
+      "severity": 75
+    },
+    {
+      "id": "PRIVACY_004",
+      "title": "민감정보 특별 보호",
+      "description": "주민번호, 여권번호 등 민감정보의 특별 보호",
+      "keywords": ["주민번호", "여권번호", "운전면허"],
+      "severity": 100
+    }
+  ]
+}

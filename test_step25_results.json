@@ -1,0 +1,68 @@
+{
+  "test_suite": "Step 2.5 Orchestrator 백지화 설계",
+  "timestamp": "2026-07-22T01:04:25.341109",
+  "tests": {
+    "orchestrator_state": "✓ 통과",
+    "score_calculation": "✓ 통과",
+    "decision_function": "✓ 통과",
+    "integration": "✓ 통과",
+    "workflow_scenarios": 4
+  },
+  "scenarios": [
+    {
+      "scenario": "안전 요청",
+      "request_id": "test_safe_001",
+      "final_score": 43.53,
+      "final_decision": "Conditional Allow",
+      "data_types": [
+        "대외비",
+        "일반정보"
+      ],
+      "context_risk": 25.1,
+      "attack_detected": false,
+      "policy_violation": false,
+      "status": "⚠"
+    },
+    {
+      "scenario": "일반 업무",
+      "request_id": "test_general_002",
+      "final_score": 57.25,
+      "final_decision": "Approval Required",
+      "data_types": [
+        "신용정보",
+        "개인정보"
+      ],
+      "context_risk": 35.0,
+      "attack_detected": false,
+      "policy_violation": true,
+      "status": "✓"
+    },
+    {
+      "scenario": "높은 위험",
+      "request_id": "test_high_risk_003",
+      "final_score": 58.43,
+      "final_decision": "Approval Required",
+      "data_types": [
+        "신용정보",
+        "개인정보"
+      ],
+      "context_risk": 38.1,
+      "attack_detected": true,
+      "policy_violation": false,
+      "status": "✓"
+    },
+    {
+      "scenario": "공격 탐지",
+      "request_id": "test_attack_004",
+      "final_score": 34.44,
+      "final_decision": "Conditional Allow",
+      "data_types": [
+        "일반정보"
+      ],
+      "context_risk": 21.8,
+      "attack_detected": true,
+      "policy_violation": true,
+      "status": "⚠"
+    }
+  ]
+}
